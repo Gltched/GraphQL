@@ -26,3 +26,8 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm run setup
+    
+    - name: Upload a Build Artifact
+      uses: actions/upload-artifact@v2.2.3
+      with:
+        path: ./
